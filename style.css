@@ -1,0 +1,129 @@
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --icon-fill: hsl(178, 100%, 50%);
+    --iconfill2: hsl(215, 51%, 70%);
+}
+
+
+
+
+*{
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    background-color: var(--Very-dark-blue-main-BG);
+}
+.container{
+    /* max-width: 30rem; */
+    height: 720px;
+    max-width: 400px;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: grid;
+    align-items: start;
+    gap: 2rem;
+    background-color: var(--Very-dark-blue-card-BG);
+    padding: 2rem 2rem;
+}
+.container > :first-child{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+
+
+h3:hover, .bottom-img-name span:hover{
+    color: var(--icon-fill);
+    cursor: pointer;
+}
+.eye-background{
+     width: 337px;
+    height: 336px;
+    background-color: hsla(178, 100%, 50%, 0.418);
+    position: absolute;
+    opacity: 0;
+}
+.eye-background:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* opacity: 0;  */
+    transition: .5sec ease-in-out;
+    
+}
+
+@media (min-width: 600px){
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .container{
+        height: 720px;
+        width: 400px;
+        border-radius: 1rem;
+    }
+}
+h3{
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+}
+.container p{
+    color: var(--iconfill2);
+    font-size: 18px;
+    font-weight: 600;
+}
+.group-items{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+.etherium, .clock{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    gap: .5rem;
+}
+.etherium p, .eth-icon{
+    fill: var(--icon-fill);
+    color: var(--icon-fill);
+}
+.clock p, .clock-icon{
+    fill: var(--iconfill2);
+    color: var(--iconfill2)
+}
+.bottom-img-name{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-top: -1rem;
+    gap: 1rem;
+}
+
+.bottom-img-name img{
+    width: 60px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+.bottom-img-name span{
+    color: white;
+    font-size: 19px;
+}
+
+
